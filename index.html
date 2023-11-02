@@ -4,8 +4,14 @@
   <title>My API Documentation</title>
   <style>
   body {
-    text-align: center;
     font-family: Arial, sans-serif;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ul {
+    padding: 0;
   }
     </style>
 </head>
@@ -14,13 +20,21 @@
   <h1>Welcome to the API!</h1>
   <h2>How to use this API:</h2>
   <ul>
+    <li><strong>POST /posts :</strong> Create a new post. The body should be a JSON object with 'title', 'content', and 'author' keys.</li>
+    <br/>
+    <li><strong>GET /posts :</strong> Get all posts.</li>
+    <br/>
     <li><strong>GET /posts/:id :</strong> Get a post by ID. Replace ':id' with the ID of the post you want to retrieve.</li>
     <br/>
-    <li><strong>POST /posts :</strong> Create a new post. The body should be a JSON object with 'title', 'content', and 'author' keys.</li>
+    <li><strong>GET /posts/author/:authorName :</strong> Get all posts by a specific author. Replace ':authorName' with the author's name.</li>
+    <br/>
+    <li><strong>GET /posts/dates/:startDate/:endDate :</strong> Get all posts created within a date range. Replace ':startDate' and ':endDate' with the desired date range in the format 'YYYY-MM-DD'.</li>
     <br/>
     <li><strong>PUT /posts/:id :</strong> Update an existing post. Replace ':id' with the ID of the post you want to update. The body should be a JSON object with the 'title', 'content', 'author' keys you want to update.</li>
     <br/>
-          <li><strong>DELETE /posts/:id :</strong> Delete a post. Replace ':id' with the ID of the post you want to delete.</li>
-        </ul>
+    <li><strong>DELETE /posts/:id :</strong> Delete a post. Replace ':id' with the ID of the post you want to delete.</li>
+    <br/>
+    <li><strong>DELETE /posts/author/:authorName :</strong> Delete all posts by a specific author. Replace ':authorName' with the author's name to delete all their posts.</li>
+  </ul>
       </body>
       </html>
